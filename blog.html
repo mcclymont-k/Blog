@@ -1,0 +1,85 @@
+
+<html>
+  <head>
+    <title>BLOG</title>
+    <link rel='stylesheet' href='blogStyle.css'>
+  </head>
+
+  <body>
+
+      <div class='container1'>
+        <div class='div1 topBox'>About
+          <div class='div1Inner'>
+            <h1>Hi, I am,</h1>
+            <h1>Kieran McClymont</h1></br>
+            <h2>I am 29 years old</h2>
+            <h3>I grew up in the United Kingdom and later moved to New Zealand with my family.</h3>
+            <h4>I am passionate about technology and web development.</br></br>
+            My hobbies  include: Trail running, CrossFit and photography.</br></br>
+            Feel free to scroll through some pictures I took in Vietnam.</h4></br>
+
+
+          </div>
+        </div>
+        <div class='div2 topBox'>General
+          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+        </div>
+        <div class='div3 topBox'>Articles
+          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+        </div>
+        <div class='div4 topBox'>Contact
+          <div class='divInner'></div>
+          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+        </div>
+      </div>
+
+      <div class='imageContainer'>
+        <img class='mainImage' src='./pictures/baby.jpg'></img>
+      </div>
+
+      <div class='arrowKey'>></div>
+
+    <script type="text/javascript">
+
+      function clickBox(className, classToAdd) {
+        const box = document.querySelectorAll(className);
+        box.forEach(box => box.addEventListener('click', function(e){
+          this.classList.toggle(classToAdd);
+          for (var x=0; x < this.children.length; x++) {
+            this.children[x].classList.toggle(classToAdd)
+        }
+      }))};
+
+
+
+
+
+      const imageFile = ['./pictures/baby.jpg', './pictures/girl.jpg', './pictures/bird_pic.jpg', './pictures/girl and basket.jpg', './pictures/lady.jpg'];
+      var imageNum = 0;
+      function pictureChange(input){
+        const arrowClick = document.querySelector(input);
+        arrowClick.addEventListener('click', function(e){
+          const image = document.querySelector('.mainImage');
+          if (imageNum +1 < imageFile.length){
+            image.src = imageFile[imageNum + 1];
+            imageNum += 1;
+          }
+          else {
+            image.src = imageFile[0]
+            imageNum = 0;
+          }
+        });
+      };
+
+      clickBox('.topBox', 'clicked');
+      pictureChange('.arrowKey');
+
+    </script>
+  </body>
+
+  </html>

@@ -17,15 +17,30 @@
             <h4>I am passionate about technology and web development.</br></br>
             My hobbies  include: Trail running, CrossFit and photography.</br></br>
             Feel free to scroll through some pictures I took in Vietnam.</h4></br>
-
-
           </div>
         </div>
         <div class='div2 topBox'>General
           <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
         </div>
         <div class='div3 topBox'>Articles
-          <div class='divInner'>Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div Loads of stuff written down so that it is all added to the the div</div>
+          <div class='divInner'>
+            <h1>
+              Check out this article by Wes Bos discussing the template literal and its uses.<br><br>
+              It is super helpful when trying to add information to your documents that is regularly updating.
+            </h1>
+            <a href='http://wesbos.com/template-strings-html' target='_blank'>
+              <img src='http://wesbos.com/wp-content/uploads/2016/10/template-html-450x250.png'/>
+            </a>
+          </div>
+          <div class='divInner'>
+            <h1>
+              Check out this article by Wes Bos discussing the template literal and its uses.<br><br>
+              It is super helpful when trying to add information to your documents that is regularly updating.
+            </h1>
+            <a href='http://wesbos.com/template-strings-html' target='_blank'>
+              <img src='http://wesbos.com/wp-content/uploads/2016/10/template-html-450x250.png'/>
+            </a>
+          </div>
         </div>
         <div class='div4 topBox'>Contact
           <div class='divInner'></div>
@@ -41,7 +56,7 @@
       <div class='imageContainer'>
         <img class='mainImage' src='./pictures/baby.jpg'></img>
       </div>
-
+      
       <div class='arrowKey'>></div>
 
     <script type="text/javascript">
@@ -49,18 +64,19 @@
       function clickBox(className, classToAdd) {
         const box = document.querySelectorAll(className);
         box.forEach(box => box.addEventListener('click', function(e){
+          console.log(e.target.tagName)
+          if (e.target.tagName === 'IMG' || e.target.tagName === 'A' || e.target.tagName === 'H1'){
+            return;
+          }
           this.classList.toggle(classToAdd);
           for (var x=0; x < this.children.length; x++) {
             this.children[x].classList.toggle(classToAdd)
         }
       }))};
 
-
-
-
-
       const imageFile = ['./pictures/baby.jpg', './pictures/girl.jpg', './pictures/bird_pic.jpg', './pictures/girl and basket.jpg', './pictures/lady.jpg'];
       var imageNum = 0;
+
       function pictureChange(input){
         const arrowClick = document.querySelector(input);
         arrowClick.addEventListener('click', function(e){
@@ -80,6 +96,7 @@
       pictureChange('.arrowKey');
 
     </script>
+
   </body>
 
   </html>

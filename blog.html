@@ -54,9 +54,9 @@
       </div>
 
       <div class='imageContainer'>
-        <img class='mainImage' src='./pictures/baby.jpg'></img>
+        <img class='mainImage' src='./Pictures/baby.jpg'></img>
       </div>
-      
+
       <div class='arrowKey'>></div>
 
     <script type="text/javascript">
@@ -64,7 +64,6 @@
       function clickBox(className, classToAdd) {
         const box = document.querySelectorAll(className);
         box.forEach(box => box.addEventListener('click', function(e){
-          console.log(e.target.tagName)
           if (e.target.tagName === 'IMG' || e.target.tagName === 'A' || e.target.tagName === 'H1'){
             return;
           }
@@ -74,7 +73,7 @@
         }
       }))};
 
-      const imageFile = ['./pictures/baby.jpg', './pictures/girl.jpg', './pictures/bird_pic.jpg', './pictures/girl and basket.jpg', './pictures/lady.jpg'];
+      const imageFile = ['./Pictures/baby.jpg', './Pictures/girl.jpg', './Pictures/bird_pic.jpg', './Pictures/girl and basket.jpg', './Pictures/lady.jpg'];
       var imageNum = 0;
 
       function pictureChange(input){

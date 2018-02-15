@@ -13,24 +13,31 @@
 body {
   background: var(--backgroundGrey);
   background-position: center;
-  background-size: 400px 650px;
+  /* background-size: 400px 650px; */
   background-repeat: no-repeat;
 }
 
 .imageContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   position: fixed;
   left: 0;
   right: 0;
   z-index: -1;
-  margin-top: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .mainImage {
-  height: 800px;
-  width: 600px;
   transition: 2s;
+  height: 100%;
+  width: 100%;
+  grid-column: 3/6;
+  grid-row: 1 / 7;
 }
 
 .container1 {

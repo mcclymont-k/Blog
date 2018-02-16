@@ -49,6 +49,7 @@ body {
 }
 
 .topBox {
+  border-radius: 25%;
   color: var(--backgroundGrey);
   box-shadow: 5px 5px 5px var(--darkestGreen);
   margin-right:  5px;
@@ -64,6 +65,7 @@ body {
 }
 
 .topBox.clicked {
+  border-radius: 3%;
   transition: 1s;
   width: 100vh;
   height: 100vw;
@@ -82,6 +84,7 @@ body {
   font-size: 20px;
   padding: 20px;
   background: var(--greyWhite);
+  color: #685e5ecc;
 }
 
 .div2 {
